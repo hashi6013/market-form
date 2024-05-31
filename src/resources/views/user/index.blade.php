@@ -17,6 +17,10 @@
 @section('content')
 <section>
     <h2>おすすめ</h2>
+    @foreach($items as $item)
+    <img src="{{ asset('storage/'.$item->image_url)}}" width="240" height="160" alt="お店の画像" decoding="async">
+    <p>{{$item->name}}</p>
+    @endforeach
 
 </section>
 

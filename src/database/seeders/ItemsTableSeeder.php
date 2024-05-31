@@ -19,7 +19,7 @@ class ItemsTableSeeder extends Seeder
             'name' => 'HTML教材',
             'price' => '2000',
             'description' => 'とても分かりやすい教材です。',
-            'image_url' => 'images/market-noimage.jpg',
+            'image_url' => 'images/market-noimage.png',
         ];
         DB::table('items')->insert($param);
         $param = [
@@ -27,7 +27,7 @@ class ItemsTableSeeder extends Seeder
             'name' => 'JavaScript教材',
             'price' => '1500',
             'description' => 'とても分かりやすい教材です。',
-            'image_url' => 'images/market-noimage.jpg',
+            'image_url' => 'images/market-noimage.png',
         ];
         DB::table('items')->insert($param);
         $param = [
@@ -35,7 +35,7 @@ class ItemsTableSeeder extends Seeder
             'name' => 'Tシャツ',
             'price' => '2500',
             'description' => '新品同様です。',
-            'image_url' => 'images/market-noimage.jpg',
+            'image_url' => 'images/market-noimage.png',
         ];
         DB::table('items')->insert($param);
         $param = [
@@ -43,7 +43,7 @@ class ItemsTableSeeder extends Seeder
             'name' => 'シューズ',
             'price' => '6000',
             'description' => 'ほぼ新品です。',
-            'image_url' => 'images/market-noimage.jpg',
+            'image_url' => 'images/market-noimage.png',
         ];
         DB::table('items')->insert($param);
         $param = [
@@ -51,7 +51,7 @@ class ItemsTableSeeder extends Seeder
             'name' => '財布',
             'price' => '10000',
             'description' => '一度も使ってません。',
-            'image_url' => 'images/market-noimage.jpg',
+            'image_url' => 'images/market-noimage.png',
         ];
         DB::table('items')->insert($param);
         $param = [
@@ -59,7 +59,7 @@ class ItemsTableSeeder extends Seeder
             'name' => '大容量バッグ',
             'price' => '8000',
             'description' => '大容量です。',
-            'image_url' => 'images/market-noimage.jpg',
+            'image_url' => 'images/market-noimage.png',
         ];
         DB::table('items')->insert($param);
         $param = [
@@ -67,7 +67,7 @@ class ItemsTableSeeder extends Seeder
             'name' => 'PHP教材',
             'price' => '2000',
             'description' => '難しい教材です。',
-            'image_url' => 'images/market-noimage.jpg',
+            'image_url' => 'images/market-noimage.png',
         ];
         DB::table('items')->insert($param);
         $param = [
@@ -75,7 +75,7 @@ class ItemsTableSeeder extends Seeder
             'name' => 'CSS教材',
             'price' => '2000',
             'description' => 'とても分かりやすい教材です。',
-            'image_url' => 'images/market-noimage.jpg',
+            'image_url' => 'images/market-noimage.png',
         ];
         DB::table('items')->insert($param);
         $param = [
@@ -83,7 +83,7 @@ class ItemsTableSeeder extends Seeder
             'name' => '子供用の服',
             'price' => '2000',
             'description' => 'やや汚れあり。',
-            'image_url' => 'images/market-noimage.jpg',
+            'image_url' => 'images/market-noimage.png',
         ];
         DB::table('items')->insert($param);
         $param = [
@@ -91,7 +91,7 @@ class ItemsTableSeeder extends Seeder
             'name' => 'ブーツ',
             'price' => '5000',
             'description' => 'やや色落ちしています。',
-            'image_url' => 'images/market-noimage.jpg',
+            'image_url' => 'images/market-noimage.png',
         ];
         DB::table('items')->insert($param);
     }
