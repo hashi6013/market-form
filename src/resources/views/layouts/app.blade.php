@@ -10,14 +10,12 @@
 </head>
 <body>
     <header class="header">
-        <div class="header-container">
-            <h1 class="header__logo">
-                <a class="header__link" href="/">
-                    <img class="header__link-item" src="{{ asset('img/logo.svg') }}" alt="COACHTECH" decoding="async">
-                </a>
-            </h1>
-            @yield('nav')
+        <div class="logo">
+            <a class="logo__link" href="/">
+                <img class="logo__link-item" src="{{ asset('img/logo.svg') }}" alt="COACHTECH" decoding="async">
+            </a>
         </div>
+        @yield('nav')
     </header>
     <main>
         @yield('content')

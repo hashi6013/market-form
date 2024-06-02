@@ -16,16 +16,15 @@
 
 @section('content')
 <section>
-    <h2>おすすめ</h2>
+    <form action="#">
+        @csrf
+        <button><span>おすすめ</span></button>
+    </form>
     <section>
         @foreach($items as $item)
-        <p>
-            <img src="{{ asset('storage/'.$item->image_url)}}" width="240" height="160" alt="出品された商品の画像" decoding="async">
-            @endforeach
-        </p>
+        <img src="{{ asset('storage/'.$item->image_url)}}" width="240" height="160" alt="出品された商品の画像" decoding="async">
+        @endforeach
     </section>
 </section>
-<section>
-    <h2>マイリスト</h2>
-</section>
+
 @endsection
