@@ -2,29 +2,37 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/user/index.css') }}">
-
-@section('nav')
-<input type="text" placeholder="何をお探しですか？">
-<nav>
-    <ul>
-        <li>ログイン</li>
-        <li>会員登録</li>
-        <li><a href="">出品</a></li>
-    </ul>
-</nav>
 @endsection
 
 @section('content')
 <section>
     <form action="#">
         @csrf
-        <button><span>おすすめ</span></button>
+        <h2>
+            <button>
+                <span>おすすめ</span>
+            </button>
+        </h2>
     </form>
-    <section>
-        @foreach($items as $item)
-        <img src="{{ asset('storage/'.$item->image_url)}}" width="240" height="160" alt="出品された商品の画像" decoding="async">
-        @endforeach
-    </section>
+    @foreach($items as $item)
+    <a href="/item/{{$item->id}}">
+        <figure>
+            <img src="{{ asset('storage/'.$item->image_url) }}" alt="">
+        </figure>
+    </a>
+    @endforeach
+</section>
+<section>
+    <form action="">
+        @csrf
+        <h2>
+            <a href="">
+                <button>
+                    <span>マイリスト</span>
+                </button>
+            </a>
+        </h2>
+    </form>
 </section>
 
 @endsection

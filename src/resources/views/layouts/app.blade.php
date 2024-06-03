@@ -15,10 +15,18 @@
                 <img class="logo__link-item" src="{{ asset('img/logo.svg') }}" alt="COACHTECH" decoding="async">
             </a>
         </div>
-        @yield('nav')
+        <input type="text" placeholder="なにをお探しですか?">
+        <nav>
+            <ul>
+                <li>ログイン</li>
+                <li>会員登録</li>
+                <li><a href="">出品</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         @yield('content')
+        <script src="https://kit.fontawesome.com/281a1830c2.js" crossorigin="anonymous"></script>
     </main>
 </body>
 </html>
