@@ -16,7 +16,7 @@
             </a>
         </div>
         <input type="text" placeholder="なにをお探しですか?">
-        <nav>
+        <nav class="nav">
             <ul>
                 <li>ログイン</li>
                 <li>会員登録</li>

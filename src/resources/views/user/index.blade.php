@@ -5,34 +5,32 @@
 @endsection
 
 @section('content')
-<section>
-    <form action="#">
-        @csrf
-        <h2>
-            <button>
-                <span>おすすめ</span>
-            </button>
-        </h2>
-    </form>
-    @foreach($items as $item)
-    <a href="/item/{{$item->id}}">
-        <figure>
-            <img src="{{ asset('storage/'.$item->image_url) }}" alt="">
-        </figure>
-    </a>
-    @endforeach
-</section>
-<section>
-    <form action="">
-        @csrf
-        <h2>
-            <a href="">
-                <button>
-                    <span>マイリスト</span>
+<div class="recommend">
+    <section class="recommend__list">
+        <form class="recommend__form" action="#">
+            @csrf
+            <h2 class="recommend__title">
+                <button class="recommend__button">
+                    <span>おすすめ</span>
                 </button>
-            </a>
-        </h2>
-    </form>
-</section>
+            </h2>
+        </form>
+        @foreach($items as $item)
+        <ul class="grid">
+            <li class="grid__item">
+                <a class="recommend-card" href="/item/{{$item->id}}">
+                    <figure class="recommend-card__img">
+                        <img src="{{ asset('storage/'.$item->image_url) }}" alt="">
+                    </figure>
+                </a>
+            </li>
+        </ul>
+        @endforeach
+    </section>
+
+    <!-- 以下に、マイリスト -->
+
+</div>
+
 
 @endsection
