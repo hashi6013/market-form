@@ -5,24 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COACHTECH</title>
     <link rel="stylesheet" href="{{ asset('css/layout/sanitize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/layout/sanitize.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/layout/common.css') }}">
     @yield('css')
 </head>
 <body>
     <header class="header">
-        <div class="logo">
-            <a class="logo__link" href="/">
-                <img class="logo__link-item" src="{{ asset('img/logo.svg') }}" alt="COACHTECH" decoding="async">
-            </a>
+        <div class="header-container w-container">
+            <div class="logo">
+                <a class="logo__link" href="/">
+                    <img class="logo__link-item" src="{{ asset('img/logo.svg') }}" alt="COACHTECH" decoding="async" width="300" height="25">
+                </a>
+            </div>
+            <form class="header-form" action="#">
+                @csrf
+                <input class="header-form__input" type="text" placeholder="なにをお探しですか?">
+                <button class="header-form__submit" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a class="nav__list-item-link" href="#">ログイン</a></li>
+                    <li class="nav__list-item"><a class="nav__list-item-link" href="#">会員登録</a></li>
+                    <li class="nav__list-item"><a class="nav__list-item-link nav__list-item-link--white" href="#">出品</a></li>
+                </ul>
+            </nav>
         </div>
-        <input type="text" placeholder="なにをお探しですか?">
-        <nav class="nav">
-            <ul>
-                <li>ログイン</li>
-                <li>会員登録</li>
-                <li><a href="">出品</a></li>
-            </ul>
-        </nav>
     </header>
     <main>
         @yield('content')

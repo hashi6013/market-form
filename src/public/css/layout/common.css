@@ -1,6 +1,65 @@
 html {
     font-size: 62.5%;
 }
-.header {
-    max-width: 1200px;
+
+/* 他のページと共有 */
+.w-container {
+    width: min(92%, 1230px);
+    margin: auto;
 }
+/* ここまで */
+
+.header {
+    background-color: #000;
+    height: 60px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header-form__input {
+    width: 300px;
+}
+
+.header-form__input::placeholder {
+    padding-left: 20px;
+    color: #000;
+}
+
+.header-form__input,
+.header-form__submit {
+    height: 30px;
+}
+
+.nav__list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav__list-item-link {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav__list-item-link:hover {
+    background-color: #5e5e5e;
+}
+
+.nav__list-item-link--white {
+    background-color: #fff;
+    color: #000;
+    border-radius: 4px;
+}
+
+.nav__list-item-link--white:hover {
+    background-color: rgba(245, 245, 245, 0.9);
+}
+
