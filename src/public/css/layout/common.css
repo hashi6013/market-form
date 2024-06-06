@@ -2,6 +2,17 @@ html {
     font-size: 62.5%;
 }
 
+:root {
+    /* padding */
+    --v-space: clamp(30px, 9vw, 50px);
+    /* color */
+    --red: #f74e4a;
+    --gray: #949394;
+    /* style */
+    --main-color: var(--red);
+    --sub-color: var(--gray);
+}
+
 /* 他のページと共有 */
 .w-container {
     width: min(92%, 1230px);
