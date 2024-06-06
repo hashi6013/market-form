@@ -1,0 +1,67 @@
+.item-detail-container {
+    padding: var(--v-space) 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 150px;
+}
+
+/* 商品画像 */
+.item-detail-img__item {
+    max-width: 100%;
+    height: auto;
+}
+
+/* コメントページと共有 */
+/* タイトル */
+.title-decoration {
+    font-size: 3.0rem;
+    margin-top: 0;
+}
+
+/* ブランド名 */
+.item-brand-decoration {
+    margin-top: -20px;
+}
+
+/* 値段 */
+.item-price-decoration {
+    font-size: 1.8rem;
+}
+
+/* フォーム */
+.item-form {
+    display: flex;
+    gap: 30px;
+}
+
+/* 購入ページのボタンと共有 */
+.item-detail-link {
+    background-color: var(--main-color);
+    color: #fff;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 7px 60px;
+    text-decoration: none;
+}
+
+/* 共有ここまで */
+
+/* 商品説明 */
+.item-detail__description-title {
+    font-size: 2.4rem;
+}
+
+/* カテゴリー */
+.item-detail__description-caption {
+    font-size: 1.6rem;
+}
+
+/* 商品の状態、レイアウト */
+.item-detail__description-layout {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
