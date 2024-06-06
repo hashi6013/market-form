@@ -1,36 +1,34 @@
 @extends('layouts.app')
 
 @section('css')
+<link rel="stylesheet" href="{{ asset('css/layout/common.css') }}">
 <link rel="stylesheet" href="{{ asset('css/user/index.css') }}">
 @endsection
 
 @section('content')
-<div class="recommend">
-    <section class="recommend__list">
-        <form class="recommend__form" action="#">
-            @csrf
-            <h2 class="recommend__title">
-                <button class="recommend__button">
-                    <span>おすすめ</span>
-                </button>
-            </h2>
-        </form>
-        @foreach($items as $item)
-        <ul class="grid">
-            <li class="grid__item">
-                <a class="recommend-card" href="/item/{{$item->id}}">
-                    <figure class="recommend-card__img">
-                        <img src="{{ asset('storage/'.$item->image_url) }}" alt="">
-                    </figure>
+
+<section class="items">
+    <div class="items-container">
+        <div class="items-tab">
+            <a class="items-tab__link" href="#">
+                <span class="items-tab__link-text items-tab__link-text--default">おすすめ</span>
+            </a>
+            <a class="items-tab__link" href="#">
+                <span class="items-tab__link-text">マイリスト</span>
+            </a>
+        </div>
+
+        <div class="grid-container w-container">
+            @foreach($items as $item)
+            <figure>
+                <a class="item-card" href="/item/{{$item->id}}">
+                    <img src="{{ asset('storage/'.$item->image_url) }}" alt="出品された商品の画像" width="150" height="150">
                 </a>
-            </li>
-        </ul>
-        @endforeach
-    </section>
+            </figure>
+            @endforeach
+        </div>
+    </div>
+</section>
 
     <!-- 以下に、マイリスト -->
-
-</div>
-
-
 @endsection

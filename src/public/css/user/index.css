@@ -1,0 +1,30 @@
+.items-container {
+    padding: var(--v-space) 0;
+}
+
+.items-tab {
+    max-width: 1230px;
+    margin: 0 auto ;
+    padding-left: 150px;
+    border-bottom: 2px solid var(--sub-color);
+    display: flex;
+    gap: 40px;
+}
+
+.items-tab__link {
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.items-tab__link-text--default {
+    color: var(--main-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-top: 30px;
+}
+
