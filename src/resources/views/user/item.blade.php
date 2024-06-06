@@ -19,7 +19,7 @@
                     <i class="fa-regular fa-comment"></i>
                 </span>
             </form>
-            <a class="item-detail-link" href="#">
+            <a class="item-detail-link" href="/purchase/{{$item_detail->id}}">
                 購入する
             </a>
             <div class="item-detail__description">

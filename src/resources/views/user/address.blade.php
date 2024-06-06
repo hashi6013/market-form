@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+<section>
+
+
 <form action="">
     @csrf
     <!-- ここにパッチ -->
@@ -14,5 +17,5 @@
 @foreach($edits as $edit)
 {{$edit->user->id}}
 @endforeach
-
+</section>
 @endsection
