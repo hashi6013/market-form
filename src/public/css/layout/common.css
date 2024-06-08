@@ -26,7 +26,7 @@ i {
 }
 
 /* 他のページと共有 */
-.w-container {
+.w__inner {
     width: min(92%, 1230px);
     margin: auto;
 }
@@ -38,7 +38,7 @@ i {
     height: 60px;
 }
 
-.header-container {
+.header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -7,24 +7,26 @@
 @section('content')
 
 <section class="items">
-    <div class="items-container">
-        <div class="items-tab">
-            <a class="items-tab__link" href="#">
-                <span class="items-tab__link-text items-tab__link-text--default">おすすめ</span>
+    <div class="items__inner">
+        <div class="items__tab">
+            <a class="items__tab-link" href="#">
+                <span class="items__tab-link-text">おすすめ</span>
             </a>
-            <a class="items-tab__link" href="#">
-                <span class="items-tab__link-text">マイリスト</span>
+            <a class="items__tab-link" href="#">
+                <span class="items__tab-link-text items__tab-link-text--gray">マイリスト</span>
             </a>
         </div>
 
-        <div class="grid-container w-container">
-            @foreach($items as $item)
-            <figure>
-                <a class="item-card" href="/item/{{$item->id}}">
-                    <img src="{{ asset('storage/'.$item->image_url) }}" alt="出品された商品の画像" width="150" height="150">
-                </a>
-            </figure>
-            @endforeach
+        <div class="items-card">
+            <div class="items-card__content w__inner">
+                @foreach($items as $item)
+                <figure class="items-card__content-img">
+                    <a class="items-card__content-img-link" href="/item/{{$item->id}}">
+                        <img src="{{ asset('storage/'.$item->image_url) }}" alt="出品された商品の画像" width="150" height="150">
+                    </a>
+                </figure>
+                @endforeach
+            </div>
         </div>
     </div>
 </section>

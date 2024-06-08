@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="header-container w-container">
+        <div class="header__inner w__inner">
             <div class="logo">
                 <a class="logo__link" href="/">
                     <img class="logo__link-item" src="{{ asset('img/logo.svg') }}" alt="COACHTECH" decoding="async" width="300" height="25">
