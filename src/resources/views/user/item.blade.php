@@ -48,10 +48,15 @@
                 </section>
             </section>
         </div>
-
-        <figure class="item-detail-img">
-            <img class="item-detail-img__item" src="{{ asset('storage/'.$item_detail->image_url) }}" alt="" width="240" height="360">
-        </figure>
+        <div class="item-detail-img">
+            <figure class="item-detail-img__content">
+                <img class="item-detail-img__item" src="{{ asset('storage/'.$item_detail->image_url) }}" alt="" width="240" height="360">
+            </figure>
+            <div class="item-detail-img-layout">
+                <a class="item-detail-img__link item-detail-about__link" href="/comment?id={{ $item_detail->id }}">コメントする</a>
+            </div>
+        </div>
     </div>
 </section>
+
 @endsection

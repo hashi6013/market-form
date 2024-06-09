@@ -74,3 +74,11 @@
     max-width: 100%;
     height: auto;
 }
+
+.item-detail-img-layout {
+    width: 240px;
+}
+.item-detail-img__link {
+    text-align: center;
+    width: 100%;
+}

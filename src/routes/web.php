@@ -5,6 +5,7 @@ use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\AddressEditController;
 use App\Http\Controllers\MypageController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,5 @@ Route::get('/purchase/{item_id}', [PurchaseController::class, 'purchase']);
 Route::get('/purchase/address/{item_id}', [AddressEditController::class, 'addressEdit']);
 Route::get('/mypage', [MypageController::class, 'mypageIndex']);
 Route::get('/mypage/profile', [MypageController::class, 'update']);
+Route::get('/comment', [CommentController::class, 'comment']);
 
