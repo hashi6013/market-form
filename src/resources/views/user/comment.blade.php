@@ -32,24 +32,21 @@
                     <label class="comment-form__content-label" for="name2">名前</label>
                     <input class="comment-form__content-input" type="text" id="name2">
                 </p>
-                <p class="comment-form__content">
-                    <label class="comment-form__content-label--reverse" for="name3">名前</label>
-                    <input class="comment-form__content-input--reverse" type="text" id="name3">
+                <p class="comment-form__content comment-form__content--reverse">
+                    <label class="comment-form__content-label" for="name3">名前</label>
+                    <input class="comment-form__content-input" type="text" id="name3">
                 </p>
                 <p class="comment-form__content">
-                    <label class="comment-form__content-label--textarea" for="name4">商品へのコメント</label>
-                    <textarea class="comment-form__content-input--textarea" name="" id="name4"></textarea>
+                    <label class="comment-form__content-label" for="name4">商品へのコメント</label>
+                    <textarea class="comment-form__content-input comment-form__content-input--textarea" name="" id="name4"></textarea>
                 </p>
-                <button>コメントを送信する</button>
+                <button class="comment-form__content-submit">コメントを送信する</button>
             </form>
         </div>
         <div class="comment-img">
             <figure class="comment-img__content">
                 <img class="comment-img__item" src="{{ asset('storage/'.$comment->image_url) }}" alt="" width="240" height="360">
             </figure>
-            <div class="comment-img-layout">
-                <a class="comment-img__link" href="#">コメントする</a>
-            </div>
         </div>
     </div>
 </section>
