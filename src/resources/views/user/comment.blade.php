@@ -1,24 +1,23 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/user/item.css') }}">
 <link rel="stylesheet" href="{{ asset('css/user/comment.css') }}">
 @endsection
 
 @section('content')
-<section class="comment item-detail">
-    <div class="comment__inner item-detail__inner w__inner">
-        <div class="item-detail-about">
-            <h1 class="item-detail-about__title">{{ $comment->name }}</h1>
-            <p class="item-detail-about__brand">ブランド名</p>
-            <p class="item-detail-about__price">&yen;{{ $comment->price }}(値段)</p>
-            <form class="item-detail-form" action="#">
+<section class="comment">
+    <div class="comment__inner w__inner">
+        <div class="comment-about">
+            <h1 class="comment-about__title">{{ $comment->name }}</h1>
+            <p class="comment-about__brand">ブランド名</p>
+            <p class="comment-about__price">&yen;{{ $comment->price }}(値段)</p>
+            <form class="icon-form" action="#">
                 @csrf
-                <div class="item-detail-form__content">
-                    <span class="item-detail-form__content-item">
+                <div class="icon-form__content">
+                    <span class="icon-form__content-item">
                         <i class="fa-regular fa-star"></i>
                     </span>
-                    <span class="item-detail-form__content-item item-form__item--favorite">
+                    <span class="icon-form__content-item icon-form__content-item--favorite">
                         <i class="fa-regular fa-comment"></i>
                     </span>
                 </div>
@@ -44,12 +43,12 @@
                 <button>コメントを送信する</button>
             </form>
         </div>
-        <div class="item-detail-img">
-            <figure class="item-detail-img__content">
-                <img class="item-detail-img__item" src="{{ asset('storage/'.$comment->image_url) }}" alt="" width="240" height="360">
+        <div class="comment-img">
+            <figure class="comment-img__content">
+                <img class="comment-img__item" src="{{ asset('storage/'.$comment->image_url) }}" alt="" width="240" height="360">
             </figure>
-            <div class="item-detail-img-layout">
-                <a class="item-detail-img__link item-detail-about__link" href="#">コメントする</a>
+            <div class="comment-img-layout">
+                <a class="comment-img__link" href="#">コメントする</a>
             </div>
         </div>
     </div>
