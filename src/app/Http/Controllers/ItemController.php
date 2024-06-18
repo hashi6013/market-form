@@ -21,4 +21,9 @@ class ItemController extends Controller
         $item_detail = Item::find($id);
         return view('user.item', compact('item_detail'));
     }
+
+    public function sell()
+    {
+        return view('user.sell');
+    }
 }
