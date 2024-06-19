@@ -10,7 +10,7 @@
         <h1 class="sell__title">商品の出品</h1>
         <form class="sell-form" action="">
             @csrf
-            <p class="sell-form__content">
+            <div class="sell-form__content">
                 <p class="sell-form__content-label">商品画像</p>
                 <div class="sell-form__content-image">
                     <label class="sell-form__content-label sell-form__content-label-image" for="image">
@@ -18,7 +18,7 @@
                     </label>
                     <input class="sell-form__content-input sell-form__content-input--image" type="file" id="image">
                 </div>
-            </p>
+            </div>
             <div class="sell-form__layout">
                 <h2 class="sell-form__title">商品の詳細</h2>
                 <div class="sell-form__layout-inner">
