@@ -16,9 +16,9 @@
                     <img class="logo__link-item" src="{{ asset('img/logo.svg') }}" alt="COACHTECH" decoding="async" width="300" height="25">
                 </a>
             </div>
-            <form class="header-form" action="#">
+            <form class="header-form" action="/search">
                 @csrf
-                <input class="header-form__input" type="text" placeholder="なにをお探しですか?">
+                <input class="header-form__input" type="text" placeholder="なにをお探しですか?" name="keyword" value="{{request('keyword')}}">
                 <button class="header-form__submit" type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>

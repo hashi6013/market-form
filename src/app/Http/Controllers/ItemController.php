@@ -16,6 +16,22 @@ class ItemController extends Controller
         return view('user.index', compact('items'));
     }
 
+    public function search(Request $request)
+    {
+        $query = Item::query();
+        $query = $this->getSearchQuery($request, $query);
+        $items = $query->get();
+        return view('user.index', compact('items'));
+    }
+
+    private function getSearchQuery($request, $query)
+    {
+        if(!empty($request->keyword)) {
+            $query->where('name', 'like', '%' . $request->keyword . '%');
+        }
+        return $query;
+    }
+
     public function itemDetail($id)
     {
         $item_detail = Item::find($id);

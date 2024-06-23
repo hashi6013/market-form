@@ -19,6 +19,7 @@ use App\Http\Controllers\CommentController;
 */
 
 Route::get('/', [ItemController::class, 'index']);
+Route::get('/search', [ItemController::class, 'search']);
 Route::get('/item/{item_id}', [ItemController::class, 'itemDetail']);
 Route::get('/purchase/{item_id}', [PurchaseController::class, 'purchase']);
 Route::get('/sell', [ItemController::class, 'sell']);
