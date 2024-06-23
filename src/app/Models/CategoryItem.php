@@ -14,11 +14,11 @@ class CategoryItem extends Model
         'category_id',
     ];
 
-    public function item() {
-        return $this->belongsTo('App\Models\Item');
-    }
+    // public function item() {
+        // return $this->belongsTo('App\Models\Item');
+    // }
 
-    public function category() {
-        return $this->belongsTo('App\Models\Category');
-    }
+    // public function category() {
+        // return $this->belongsTo('App\Models\Category');
+    // }
 }

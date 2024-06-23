@@ -13,8 +13,12 @@ class Category extends Model
         'name'
     ];
 
-    public function categoryItems() {
-        return $this->hasMany('App\Models\CategoryItem');
+    // public function categoryItems() {
+        // return $this->hasMany('App\Models\CategoryItem');
+    // }
+
+    public function items() {
+        return $this->belongsToMany('App\Models\Item');
     }
     // public function categoryItems() {
         // return $this->belongsToMany('App\Models\CategoryItem');
