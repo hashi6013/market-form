@@ -38,6 +38,7 @@ class ItemController extends Controller
         return view('user.item', compact('item_detail'));
     }
 
+
     public function sell()
     {
         return view('user.sell');

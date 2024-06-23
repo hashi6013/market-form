@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Favorite extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'item_id',
+        'user_id'
+    ];
+
+    public function user() {
+        return $this->belongsTo('App\Models\User');
+    }
+
+    public function item() {
+        return $this->belongsTo('App\Models\item');
+    }
 }
