@@ -25,8 +25,17 @@
             </form>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__list-item"><a class="nav__list-item-link" href="#">ログイン</a></li>
-                    <li class="nav__list-item"><a class="nav__list-item-link" href="#">会員登録</a></li>
+                    @if(Auth::check())
+                    <li class="nav__list-item">
+                        <form action="/logout" method="post">
+                            @csrf
+                            <button>ログアウト</button>
+                        </form>
+                    <li class="nav__list-item"><a class="nav__list-item-link" href="#">マイページ</a></li>
+                    @else
+                    <li class="nav__list-item"><a class="nav__list-item-link" href="/login">ログイン</a></li>
+                    <li class="nav__list-item"><a class="nav__list-item-link" href="/register">会員登録</a></li>
+                    @endif
                     <li class="nav__list-item"><a class="nav__list-item-link nav__list-item-link--white" href="#">出品</a></li>
                 </ul>
             </nav>
