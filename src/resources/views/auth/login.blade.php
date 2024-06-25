@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="login-form__button">
-                <button class="login__button-submit" type="submit">登録する</button>
+                <button class="login__button-submit" type="submit">ログインする</button>
             </div>
         </div>
     </form>

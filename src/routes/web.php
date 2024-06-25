@@ -6,6 +6,7 @@ use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\AddressEditController;
 use App\Http\Controllers\MypageController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ use App\Http\Controllers\CommentController;
 */
 
 Route::get('/', [ItemController::class, 'index']);
+// Route::get('/', [AuthController::class, 'index']);
 Route::get('/search', [ItemController::class, 'search']);
 Route::get('/item/favorite/{id}', [FavoriteController::class, 'favorite']);
 Route::get('/item/unlike/{id}', [FavoriteController::class, 'unlike']);
